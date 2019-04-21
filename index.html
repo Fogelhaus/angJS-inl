@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport " content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Demo 6</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container mw-100">
+        <header>
+            <div id="headerTop" class="row text-white w-100">
+                <div id="headerTopSocial" class="col-4 p-1 offset-2">
+                    <a class="fab fa-facebook-f mr-1"></a> <a class="fab fa-twitter mr-1"></a> <a
+                        class="fab fa-behance mr-1"></a> <a class="fab fa-pinterest mr-1"></a> <a
+                        class="fab fa-youtube mr-1"></a>
+
+                    <a href="#" class="text-white ml-5">FAQ</a> <a href="#" class="text-white">TERMS</a></div>
+                <div id="headerTopEmail" class="col-4 pt-1 text-right"> envelope info@webmail.com</div>
+            </div>
+            <div id="headerMenu" class="row my-5">
+                <div id="headerLogo" class="offset-2"><img src="/images/logo.svg" alt=""> </div>
+                <div id="headerName" class=" pl-2 pt-1"> Pohat<span>.</span></div>
+                <div id="headerLang" class="pl-5 col-2">
+                    <div class="dropdown d-inline">
+                        <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            EN
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">EN</a>
+                            <a class="dropdown-item" href="#">SE</a>
+
+                        </div>
+                    </div>
+                    <div class="d-inline pl-3 ">
+                        <button id="phoneButton" class="btn  btn-secondary px-4">+90878 87 878 7</button>
+                    </div>
+                </div>
+                <div id="headerNav">
+                    <ul>
+                        <li class="px-3 mt-1"> <a href="#">Home</a> </li>
+                        <li class="px-3"><a href="#">About</a></li>
+                        <li class="px-3"><a href="#">Services</a></li>
+                        <li class="px-3"><a href="#">Pages</a></li>
+                        <li class="px-3"><a href="#">News</a></li>
+                        <li class="px-3"><a href="#">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class=" pl-5 ">
+                    <button id="phoneButton" class="btn  btn-secondary px-5 py-3">GET A QUOTE</button>
+                </div>
+
+            </div>
+        </header>
+        <div id="storeHeadline" class=" text-center text-white ">
+            <div id="digitalMarketing" class="">DIGITAL MARKETING</div>
+            <div id="productStore">Product Store</div>
+            <div id="storeHeadlineNav">
+                <a href="#">Home</a> |
+                <a href="#">Shop</a>
+            </div>
+        </div>
+        <div id="featuresArea">
+            <div id="features" class="row col-8 offset-2 text-left py-5 ">
+
+                <div id="shipping" class="col-3 featureBox">
+                    <div class="icon"> <img class="float-right mr-3" src="/images/shipping.svg" alt=""> </div>
+                    <h1>Free Shipping</h1>
+                    <p>Orders over $100</p>
+
+                </div>
+                <div id="return" class="col-3 featureBox ">
+                    <div class="icon"> <img class="float-right mr-3" src="/images/return.svg" alt=""></div>
+                    <h1>Free Return</h1>
+                    <p>In 30 Days</p>
+                </div>
+                <div id="secure" class="col-3 featureBox">
+                    <div class="icon"> <img class="float-right mr-3" src="/images/secure.svg" alt=""></div>
+                    <h1>100% Secure</h1>
+                    <p>Shipping</p>
+                </div>
+                <div id="price" class="col-3 featureBox">
+                    <div class="icon"> <img class="float-right mr-3" src="/images/price.svg" alt=""></div>
+                    <h1>Best Price</h1>
+                    <p>Granted</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="viewArea" class="row">
+            <div id="viewGrid" class="offset-2">
+                <div id="viewGridBg">
+                    <img src="/images/gridview.svg" alt="">
+                </div>
+            </div>
+            <div id="viewList" class=" ml-4 ">
+                <div id="viewListBg"> <img src="/images/listview.svg" class=" p-2" alt="">
+                </div>
+            </div>
+
+            <div id="results" class="offset-3 mr-3">Showing 1-2 of 30 results</div>
+
+            <div id="sort" class="dropdown col-1">
+                <button class="btn  dropdown-toggle" type="button" id="sortButton" data-toggle="dropdown">
+                    Sort by
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Name</a>
+                    <a class="dropdown-item" href="#">Price</a>
+
+                </div>
+            </div>
+            <div id="searchArea" class="col-2 float-right ">
+
+                <input id="search" type="search" class="form-control" placeholder="Search from here...."
+                    ng-model="searchText">
+                <div id="searchIconContainer">
+                    <div class="searchIcon"></div>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="productArea" class="col-8 offset-2 row ">
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
