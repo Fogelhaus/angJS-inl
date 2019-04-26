@@ -24,9 +24,10 @@
                 <div id="headerTopEmail" class="col-4 pt-1 text-right"> envelope info@webmail.com</div>
             </div>
             <div id="headerMenu" class="row my-5">
-                <div id="headerLogo" class="offset-2"><img src="/images/logo.svg" alt=""> </div>
-                <div id="headerName" class=" pl-2 pt-1"> Pohat<span>.</span></div>
-                <div id="headerLang" class="pl-5 col-2">
+                <div id="headerLogo" class="offset-2 d-flex align-items-center"><img src="/images/logo.svg" alt="">
+                </div>
+                <div id="headerName" class=" pl-2 d-flex align-items-center"> Pohat<span>.</span></div>
+                <div id="headerLang" class="pl-5 col-2 d-flex align-items-center">
                     <div class="dropdown d-inline">
                         <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,9 +43,9 @@
                         <button id="phoneButton" class="btn  btn-secondary px-4">+90878 87 878 7</button>
                     </div>
                 </div>
-                <div id="headerNav">
+                <div id="headerNav" class="d-flex align-items-center mt-3">
                     <ul>
-                        <li class="px-3 mt-1"> <a href="#">Home</a> </li>
+                        <li class="px-3"> <a href="#">Home</a> </li>
                         <li class="px-3"><a href="#">About</a></li>
                         <li class="px-3"><a href="#">Services</a></li>
                         <li class="px-3"><a href="#">Pages</a></li>
@@ -53,7 +54,7 @@
 
                     </ul>
                 </div>
-                <div class=" pl-5 ">
+                <div class=" pl-5 d-flex align-items-center ">
                     <button id="phoneButton" class="btn  btn-secondary px-5 py-3">GET A QUOTE</button>
                 </div>
 
@@ -71,23 +72,27 @@
             <div id="features" class="row col-8 offset-2 text-left py-5 ">
 
                 <div id="shipping" class="col-3 featureBox">
-                    <div class="icon"> <img class="float-right mr-3" src="/images/shipping.svg" alt=""> </div>
+                    <div class="icon"> <img class="d-flex justify-content-end mr-3" src="/images/shipping.svg" alt="">
+                    </div>
                     <h1>Free Shipping</h1>
                     <p>Orders over $100</p>
 
                 </div>
                 <div id="return" class="col-3 featureBox ">
-                    <div class="icon"> <img class="float-right mr-3" src="/images/return.svg" alt=""></div>
+                    <div class="icon"> <img class="d-flex justify-content-end mr-3" src="/images/return.svg" alt="">
+                    </div>
                     <h1>Free Return</h1>
                     <p>In 30 Days</p>
                 </div>
                 <div id="secure" class="col-3 featureBox">
-                    <div class="icon"> <img class="float-right mr-3" src="/images/secure.svg" alt=""></div>
+                    <div class="icon"> <img class="d-flex justify-content-end mr-3" src="/images/secure.svg" alt="">
+                    </div>
                     <h1>100% Secure</h1>
                     <p>Shipping</p>
                 </div>
                 <div id="price" class="col-3 featureBox">
-                    <div class="icon"> <img class="float-right mr-3" src="/images/price.svg" alt=""></div>
+                    <div class="icon"> <img class="d-flex justify-content-end mr-3" src="/images/price.svg" alt="">
+                    </div>
                     <h1>Best Price</h1>
                     <p>Granted</p>
                 </div>
@@ -97,19 +102,19 @@
         </div>
 
         <div id="viewArea" class="row">
-            <div id="viewGrid" class="offset-2">
-                <div id="viewGridBg">
+            <div id="viewGrid" class="offset-2 d-flex align-items-center">
+                <div id="viewGridBg" class="p-2">
                     <img src="/images/gridview.svg" alt="">
                 </div>
             </div>
-            <div id="viewList" class=" ml-4 ">
+            <div id="viewList" class=" ml-4 d-flex align-items-center">
                 <div id="viewListBg"> <img src="/images/listview.svg" class=" p-2" alt="">
                 </div>
             </div>
 
-            <div id="results" class="offset-3 mr-3">Showing 1-2 of 30 results</div>
+            <div id="results" class="offset-3 mr-3 d-flex align-items-center">Showing 1-2 of 30 results</div>
 
-            <div id="sort" class="dropdown col-1">
+            <div id="sort" class="dropdown col-1 d-flex align-items-center">
                 <button class="btn  dropdown-toggle" type="button" id="sortButton" data-toggle="dropdown">
                     Sort by
                 </button>
@@ -119,7 +124,7 @@
 
                 </div>
             </div>
-            <div id="searchArea" class="col-2 float-right ">
+            <div id="searchArea" class="col-2 d-flex justify-content-end">
 
                 <input id="search" type="search" class="form-control" placeholder="Search from here...."
                     ng-model="searchText">
@@ -216,6 +221,26 @@
                 <div class="productPrice">$500</div>
                 <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                         class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div id="productPageCount" class="row">
+
+                <button  class="productPageCountNav btn d-flex align-items-center justify-content-center"> pil
+                </button>
+                <button class="productPageCountNav btn d-flex align-items-center justify-content-center">
+                     01
+                </button>
+                <button id="btn2" class="productPageCountNav btn d-flex align-items-center justify-content-center">
+                        02
+                </button>
+                <button class="productPageCountNav btn d-flex align-items-center justify-content-center">
+                    ...
+                </button>
+                <button class="productPageCountNav btn d-flex align-items-center justify-content-center">
+                        04
+                </button>
+                <button class="productPageCountNav btn d-flex align-items-center justify-content-center">
+                    pil
+                </button>
             </div>
         </div>
 
