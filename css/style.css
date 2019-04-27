@@ -37,8 +37,9 @@ margin: 0;
 #headerTop{
     background-color: #0e1b33;
     font-family: Rubik, sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
 }
+
 #headerTopSocial .fab{ 
     padding-right: 10px;
 }
@@ -48,11 +49,12 @@ margin: 0;
 }
 header #headerMenu{
     font-family: 'gilroyextrabold', Arial, sans-serif;
-   
+   padding: 0;
+   font-size: 12pt;
     
 }
 .logoName{
-    font-size: 36pt;
+    font-size: 30pt;
 
 }
 .spanDot{
@@ -62,18 +64,31 @@ color: #ff8155;
 #dropdownMenuButton{
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 35px;
+    height: 45px;
+    width: 70px;
 }
 #phoneButton{
     border-radius: 35px;
     background: #ff8155;
     border: #ff8155;
+    width: 180px;
+    height: 45px;
     
 }
 #headerNav ul li{
    list-style: none;
    display: inline;
-   font-size: 16pt;
+   font-size: 12pt;
 
+}
+#quoteButton{
+    border-radius: 35px;
+    background: #ff8155;
+    border: #ff8155;
+    width: 200px;
+    height: 60px;
+    justify-content: end;
+    
 }
 #storeHeadline{
     background-image: url("/images/bgdots1.png");
