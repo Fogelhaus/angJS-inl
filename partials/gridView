@@ -1,0 +1,87 @@
+<div id="productArea" class="col-8 offset-2 ">
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary "></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary "></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+            <div class="product">
+                <div id="product1Image" class="productImage bg-secondary"></div>
+                <div class="productName">Helix Stereo Colorful T-Shirt</div>
+                <div class="productPrice">$500</div>
+                <div class="productRating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+
+        </div>
