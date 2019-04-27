@@ -1,9 +1,23 @@
 @font-face {
+    font-family: 'gilroyextrabold';
+    src: url('/fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('/fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
     font-family: 'gilroylight';
     src: url('/fonts/gilroy-light-webfont.woff2') format('woff2'),
          url('/fonts/gilroy-light-webfont.woff') format('woff');
-    font-weight: 700;
+    font-weight: normal;
     font-style: normal;
+
+}
 
 }
 html{
@@ -15,25 +29,33 @@ padding: 0;
 margin: 0;
 }
 
+.rubik{
+    font-family: Rubik, sans-serif;
+ 
+}
+
 #headerTop{
     background-color: #0e1b33;
     font-family: Rubik, sans-serif;
     font-size: 14pt;
 }
+#headerTopSocial .fab{ 
+    padding-right: 10px;
+}
 
-header #headerMenu #headerLogo img{
+.logoImg{
     width: 50px;
 }
 header #headerMenu{
-    font-family: 'gilroylight', Arial, sans-serif;
+    font-family: 'gilroyextrabold', Arial, sans-serif;
    
     
 }
-header #headerMenu #headerName{
-    font-size: 30px;
+.logoName{
+    font-size: 36pt;
 
 }
-header #headerMenu #headerName span{
+.spanDot{
 color: #ff8155;
 }
 
@@ -45,10 +67,12 @@ color: #ff8155;
     border-radius: 35px;
     background: #ff8155;
     border: #ff8155;
+    
 }
 #headerNav ul li{
    list-style: none;
    display: inline;
+   font-size: 16pt;
 
 }
 #storeHeadline{
@@ -59,10 +83,12 @@ color: #ff8155;
 #digitalMarketing{
     padding-top: 110px;
     font-family: Rubik, sans-serif;
+    font-size: 18pt;
+    letter-spacing: 3px;
 
 }
 #productStore{
-    font-family: 'gilroylight', Arial, sans-serif;
+    font-family: 'gilroyextrabold', Arial, sans-serif;
     font-size: 80pt;
 }
 #features{
@@ -95,13 +121,21 @@ color: #ff8155;
     font-size: 22px;
     grid-column: 2;
     grid-row: 1;
-    
+    font-family: 'gilroyextrabold', Arial, sans-serif;
+   display: flex;
+   align-items: flex-end;
+   line-height: 0.7;
+   
+
     
 }
 .featureBox p{
     font-size: 16px;
     grid-column: 2;
     grid-row: 2;
+    font-family: 'gilroylight', Arial, sans-serif;
+    display: flex;
+    align-items: flex-start;
 }
 #viewArea{
     padding-top: 55px;
@@ -109,22 +143,37 @@ color: #ff8155;
 #viewGridBg{
     background: lightgray;
     border-radius: 100px;
-    
-    line-height: .5;
+    height: 45px;
+    width: 45px;
+    text-align: center;
 
+}
+#viewGridBg img{
+    margin-top: 4px;
 }
 
 #viewListBg{
     background: #ff8155;
     border-radius: 100px;
     
-    line-height: .5;
-
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    
+}
+#viewListBg img{
+    margin-top: 4px;
+}
+#results{
+    color: #a9b2c0;
 }
 
 #sortButton{
 border: 2px solid rgba(0, 0, 0, 0.1);
 border-radius: 35px;
+height: 50px;
+width: 200px;
+color: #a9b2c0;
 }
 #searchArea{
     position: relative;
@@ -133,28 +182,46 @@ border-radius: 35px;
 #search{
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 100px;
+    color: #000000;
+    height: 50px;
+  
     
+}
+#search::placeholder{
+    color: #a9b2c0;
+  
 }
 #searchIconContainer{
     position: absolute;
-    top: 7px;
-    right: 20px;
+    top: 14px;
+    right: 30px;
     width: 25px;
     height: 25px;
     overflow: hidden;
-    color:  rgba(0, 0, 0, 0.4);
+    color: #a9b2c0;
 }
 /* Product */
 #productArea{
-justify-content: center;
+
+
+
+display: grid;
+grid-template-columns: auto auto auto;
+justify-content: space-between;
+padding: 0;
+
+
+
+
 }
 .product {
- 
+    grid-column: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 170px 170px;
     grid-template-rows: 400px auto auto;
-    grid-gap: 2px 20px;
-    margin: 20px 30px;
+    gap: 2px 2px;
+    margin: 20px 0px;
+    width: 340px;
     
     
     
@@ -166,34 +233,168 @@ justify-content: center;
     height: 400px;
     grid-column: 1 / span 2;
     grid-row: 1;
+    margin: 0;
     
 }
 .productName{
 font-size: 22px;
 grid-column: 1 / span 2;
 grid-row: 2;
+font-family: 'gilroyextrabold', Arial, sans-serif;
+font-size: 16pt;
 }
 .productPrice{
     color: #ff8155;
     grid-column: 1;
     grid-row: 3;
+    font-family: Rubik, sans-serif;
+    font-size: 14pt;
+    
 }
 .productRating {
-    font-size: 12px;
+    
     color: #ffba00;
     grid-column: 2;
     grid-row: 3;
     text-align: right;
+    font-size: 10pt;
+    letter-spacing: 4px;
 }
-
+#productPageCount{
+    margin: 30px 0 110px 0;
+}
 .productPageCountNav{
     background: lightgray;
+    color: #ffffff;
     border-radius: 100px;
     height: 75px;
     width: 75px;
-    line-height: .5;
+    margin: 10px;
     text-align: center;
+    justify-items: center;
 }
 #btn2{
     background: #ff8155;
+}
+footer{
+    background-image: url("/images/bgdots2.png");
+    height: 609px;
+    font-family: Rubik, sans-serif;
+
+}
+#footerTop{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 100px;
+    gap: 80px;
+    justify-content: space-between;
+}
+#footerAbout{   
+    grid-column: 1;
+    width: 350px;
+}
+#footerLogoImg{
+    margin-top: 10px;
+}
+#footerName{
+    font-family: 'gilroyextrabold', Arial, sans-serif;
+    color: #ffffff;
+}
+#footerAboutInfo{
+    margin-left: 0;
+    padding-left: 0;
+    color: #a9b2c0;
+}
+
+
+
+#footerLinks{
+    grid-column: 2;
+    color: #a9b2c0;
+    width: 350px;
+
+}
+#footerLinks td:hover{
+    cursor: pointer;
+}
+#footerLinks h4{
+    font-family: 'gilroyextrabold', Arial, sans-serif;
+    font-size: 22pt;
+    color: #ffffff;
+}
+#footerNews{
+    grid-column: 3;
+}
+
+.socialButton{
+    background: #ffffff;
+    border-radius: 100px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#footerLinks td{
+    height: 45px;
+    width: 200px;
+}
+#footerNews{
+    width: 350px;
+
+}
+#footerNews h4{
+    font-family: 'gilroyextrabold', Arial, sans-serif;
+    font-size: 22pt;
+}
+.newsItem{
+display: grid;
+grid-template-columns: 80px auto;
+grid-template-rows: auto auto;
+padding-bottom: 20px;
+}
+.newsItemImg{
+    width: 80px;
+    height: 70px;
+    background-color: lightgray;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+.newsItemHeadline{
+  
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 20px;
+    font-family: 'gilroyextrabold', Arial, sans-serif;
+
+}
+.newsItemDate{
+  
+    grid-column: 2;
+    grid-row:  2;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #a9b2c0;
+}
+#footerBottom{
+    padding-top: 50px;
+}
+#copyright{
+    color: #a9b2c0;
+    font-size: 11pt;
+}
+.toTop{
+    background: #15ee90;
+    letter-spacing: 3px;
+    border-radius: 50px;
+height: 50px;
+width: 200px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.toTop:hover{
+    cursor: pointer;
 }
