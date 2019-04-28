@@ -1,0 +1,46 @@
+<div id="listView" class="d-flex justify-content-center ">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Product
+
+                    </th>
+                    <th>
+                        Category
+
+                    </th>
+                    <th>
+                        Company
+                    </th>
+                    <th>Info</th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        RatingRating
+                    </th>
+                    <th>
+                        In Stock
+                    </th>
+                    <th>
+                        Stock last checked
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr
+                    ng-repeat="product in products | orderBy:sortColumn:reverseSort | limitTo:productsShow | filter: searchText">
+                    <td>{{ product.productname }}</td>
+                    <td>{{ product.category | uppercase }}</td>
+                    <td>{{ product.company }}</td>
+                    <td>{{ product.shortdescription }}</td>
+                    <td>{{ product.price | currency: "" }}</td>
+                    <td id="stars"><i class="fas fa-star" ng-repeat="n in getNumber(product.rating) track by $index"></td>
+                        <!-- ng-class="{'gold': ($index + 1) <= array.rating, 'grey': ($index + .5) == array.rating}" -->
+                    <td class="center-text">{{ product.instock | number }}</td>
+                    <td>{{ product.instockdate | date: "yyyy-MM-dd" }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

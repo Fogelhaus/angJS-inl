@@ -152,9 +152,11 @@ color: #ff8155;
     display: flex;
     align-items: flex-start;
 }
-#viewArea{
-    padding-top: 55px;
+#presentationOptions{
+    margin-top: 110px;
+    margin-bottom: 50px;
 }
+
 #viewGridBg{
     background: lightgray;
     border-radius: 100px;
@@ -179,8 +181,15 @@ color: #ff8155;
 #viewListBg img{
     margin-top: 4px;
 }
-#results{
+#productsShow {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    height: 50px;
+    width: 70px;
     color: #a9b2c0;
+    background-color: #ffffff;
+    appearance: none;
+    -moz-appearance: none;
 }
 
 #sortButton{
@@ -189,6 +198,9 @@ border-radius: 35px;
 height: 50px;
 width: 200px;
 color: #a9b2c0;
+background-color: #ffffff;
+appearance: none;
+-moz-appearance: none;
 }
 #searchArea{
     position: relative;
@@ -277,6 +289,15 @@ font-size: 16pt;
     text-align: right;
     font-size: 10pt;
     letter-spacing: 4px;
+}
+#stars{
+    width: 100px;
+}
+.gray{
+    color: #a9b2c0;
+}
+.gold   {
+    color: #ffba00;
 }
 #productPageCount{
     margin: 30px 0 110px 0;

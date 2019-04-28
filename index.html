@@ -106,23 +106,29 @@
             </div>
 
         </div>
-        <div id="presentationOptions" class="row offset-2">
+        
+        <div id="presentationOptions" class="row offset-2 d-flex align-items-center">
             <div id="viewArea" class="row rubik col">
                 <div id="viewGrid" class="offset-2 d-flex align-items-center">
-                    <div id="viewGridBg" class=" ml-3 p-2">
-                        <img src="/images/gridview.svg" alt="">
-                    </div>
+                    <a href="#!viewGrid">
+                        <div id="viewGridBg" class=" ml-3 p-2" ng-class="{'active': cardActive, 'not-active': !cardActive}">
+                            <img src="/images/gridview.svg" alt="" ng-click="cardActive = false">
+                        </div>
+                    </a>
                 </div>
-                <div id="viewList" class=" ml-4 d-flex align-items-center">
-                    <div id="viewListBg"> <img src="/images/listview.svg" class=" p-2" alt="">
-                    </div>
+                <div id="viewList" class=" ml-4 d-flex align-items-center ">
+                    <a href="#/!">
+                        <div id="viewListBg" ng-class="{'not-active': cardActive, 'active': !cardActive}">
+                            <img src="/images/listview.svg" class=" p-2" alt="" ng-click="cardActive = true">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div id="results" class="col offset-1 mr-3 d-flex align-items-center">
                 <label for="productsShow">Products per page: </label>
                 <select name="productsShow" id="productsShow" class="dropDown" ng-model="productsShow">
                     <option value="5">5</option>
-                    <option value="10" selected="selected">10</option>
+                    <option value="10" selected >10</option>
                     <option value="20">20</option>
                     <option value="50">50</option>
                     <option value="100">100</option>
@@ -130,13 +136,13 @@
                 Showing 1-{{ productsShow }} of {{ productsTotal }} results</div>
 
             <div id="sort" class="col dropdown d-flex align-items-center">
-                <select name="sortButton" id="sortButton" class="btn dropdown-toggle" 
-                   ng-model="sortColumn" aria-placeholder="Sort By">
-                    <option value="productname" ng-click="sortData('productname')">Product Name</option>
-                    <option value="category" ng-click="sortData('category')">Category</option>
-                    <option value="company" ng-click="sortData('company')">Company</option>
+                <select name="sortButton" id="sortButton" class="" ng-model="sortColumn"
+                    aria-placeholder="Sort By">
+                    <option value="productname" ng-click="sortData('productname')"> Product Name  </option>
+                    <option value="category" ng-click="sortData('category')"> Category</option>
+                    <option value="company" ng-click="sortData('company')"> Company </option>
                 </select>
-        
+
             </div>
             <div id="searchArea" class="col d-flex align-content-center">
 
@@ -148,51 +154,8 @@
                 </div>
             </div>
         </div>
-
-        <div id="listView" class="d-flex justify-content-center ">
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Product
-                            
-                        </th>
-                        <th >
-                            Category
-                            
-                        </th>
-                        <th >
-                            Company
-                        </th>
-                        <th>Info</th>
-                        <th >
-                            Price
-                        </th>
-                        <th>
-                            Rating
-                        </th>
-                        <th>
-                            In Stock
-                        </th>
-                        <th>
-                            Stock last checked
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="product in products | orderBy:sortColumn:reverseSort | limitTo:productsShow | filter: searchText">
-                        <td>{{ product.productname }}</td>
-                        <td>{{ product.category | uppercase }}</td>
-                        <td>{{ product.company }}</td>
-                        <td>{{ product.shortdescription }}</td>
-                        <td>{{ product.price | currency: "" }}</td>
-                        <td>{{ product.rating  }}</td>
-                        <td class="center-text">{{ product.instock | number }}</td>
-                        <td>{{ product.instockdate | date: "yyyy-MM-dd" }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <div ng-view></div>
+        
 
 
 
@@ -312,7 +275,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
-    <script src="js/script.js"></script>
+   
     <script src="script/products.js"></script>
     <script src="script/app.js"></script>
 

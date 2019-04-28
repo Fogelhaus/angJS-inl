@@ -1,0 +1,14 @@
+<div id="productArea" class="col-8 offset-2 ">
+    <div class="product"
+        ng-repeat="product in products | orderBy:sortColumn:reverseSort | limitTo:productsShow | filter: searchText">
+        <div id="product1Image" class="productImage bg-secondary"></div>
+        <div class="productName">{{ product.productname }}</div>
+        <div class="productPrice">${{ product.price }}</div>
+        <div class="productRating" >
+        <!-- <i class="fas fa-star" ng-repeat="r in []getRepeater(product.rating) track by $index"></i>
+        <i class="fas fa-star gray" ng-repeat="r in []getRepeater(5 - product.rating) track by $index"></i> -->
+
+        </div>
+    </div>
+
+</div>
