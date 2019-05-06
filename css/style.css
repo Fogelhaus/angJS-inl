@@ -81,13 +81,20 @@ color: #ff8155;
    font-size: 12pt;
 
 }
-#quoteButton{
+.logBtn{
     border-radius: 35px;
     background: #ff8155;
     border: #ff8155;
-    width: 200px;
+    width: 100px;
     height: 60px;
-    justify-content: end;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+.logBtn a{
+    margin-top: 11px;
+    
     
 }
 #storeHeadline{
