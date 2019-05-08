@@ -71,7 +71,7 @@ function run($rootScope, $location, $cookies, $http) {
 
 
 
-app.controller('mainController', function ($scope, $rootScope, productsGet) {
+app.controller('mainController', function ($scope, $rootScope, productsGet, $cookies) {
 
     $rootScope.isLoggedIn = function () {
         if ($rootScope.loggedIn == undefined) {
@@ -137,95 +137,102 @@ app.controller('mainController', function ($scope, $rootScope, productsGet) {
 
     });
 
-    // CART
+    //CART
 
-    // $scope.toggleCart = function () {
-    //     if (cartIsVisible) {
-    //         document.getElementById("shoppingCart").style = " visibility: hidden;"
-    //     } else {
-    //         document.getElementById("shoppingCart").style = " visibility: visible;"
-    //     }
-    //     cartIsVisible = !cartIsVisible;
-    // }
+    $scope.toggleCart = function () {
+        if (cartIsVisible) {
+            document.getElementById("shoppingCart").style = " visibility: hidden;"
+        } else {
+            document.getElementById("shoppingCart").style = " visibility: visible;"
+        }
+        cartIsVisible = !cartIsVisible;
+    }
 
-    // var getProductId = function (products, id) {
-    //     return _.find(products, function (product) {
-    //         return product.id === id
-    //     });
-    // };
+    var getProductId = function (products, id) {
+        return _.find(products, function (product) {
+            return product.id === id
+        });
+    };
 
-    // $scope.cart = [];
-    // hasCookies();
+    $scope.cart = [];
+    hasCookies();
 
-    // setCookie = function (cart) {
-    //     var expireDate = new Date();
-    //     expireDate.setDate(expireDate.getDate() + 7);
-    //     $cookies.putObject('cart', cart, { 'expires': expireDate });
-    // }
+    setCookie = function (cart) {
+        var expireDate = new Date();
+        expireDate.setDate(expireDate.getDate() + 7);
+        $cookies.putObject('cart', cart, { 'expires': expireDate });
+    }
 
-    // function hasCookies() {
-    //     if ($cookies.getObject('cart')) {
-    //         $scope.cart = $cookies.getObject('cart');
-    //     }
-    // }
-    // $scope.emptycart = "";
-    // var cartIsVisible = false;
+    function hasCookies() {
+        if ($cookies.getObject('cart')) {
+            $scope.cart = $cookies.getObject('cart');
+        }
+    }
+    $scope.emptycart = "";
+    var cartIsVisible = false;
 
-    // $scope.addItem = function (product) {
-    //     var found = getProductId($scope.cart, product.id);
+    $scope.addItem = function (product) {
+        var found = getProductId($scope.cart, product.id);
+        
+        if (found) {
+            found.quantity += product.quantity;
+            
+        }
+        else {
+            $scope.cart.push(angular.copy(product));
+        }
 
-    //     if (found) {
-    //         found.quantity += product.quantity;
-    //     }
-    //     else {
-    //         $scope.cart.push(angular.copy(product));
-    //     }
+        if (!cartIsVisible) {
+            document.getElementById("shoppingCart").style = " visibility: visible;"
+        }
+        setCookie($scope.cart);
+    }
 
-    //     if (!cartIsVisible) {
-    //         document.getElementById("shoppingCart").style = " visibility: visible;"
-    //     }
-    //     setCookie($scope.cart);
-    // }
+    $scope.removeItem = function (product) {
+        var index = $scope.cart.indexOf(product);
+        $scope.cart.splice(index, 1);
+        setCookie($scope.cart);
+    }
 
-    // $scope.removeItem = function (product) {
-    //     var index = $scope.cart.indexOf(product);
-    //     $scope.cart.splice(index, 1);
-    //     setCookie($scope.cart);
-    // }
+    $scope.getProductCost = function (product) {
+        return product.quantity * product.price;
+    }
 
-    // $scope.getProductCost = function (product) {
-    //     return product.quantity * product.price;
-    // }
+    $scope.getproductQuantity = function (product) {
+        return product.quantity;
+    }
 
-    // $scope.getproductQuantity = function (product) {
-    //     return product.quantity;
-    // }
+    $scope.getTotal = function () {
+        var total = _.reduce($scope.cart, function (sum, product) {
+            return sum + $scope.getProductCost(product);
+        }, 0);
 
-    // $scope.getTotal = function () {
-    //     var total = _.reduce($scope.cart, function (sum, product) {
-    //         return sum + $scope.getProductCost(product);
-    //     }, 0);
+        if ($scope.cart.length === 0) {
+            $scope.emptycart = "Your cart is empty."
+        }
+        else {
+            $scope.emptycart = ""
+        }
+        return total;
+    }
 
-    //     if ($scope.cart.length === 0) {
-    //         $scope.emptycart = "Your cart is empty."
-    //     }
-    //     else {
-    //         $scope.emptycart = ""
-    //     }
-    //     return total;
-    // }
+    $scope.getQuantity = function () {
+        var quantity = _.reduce($scope.cart, function (sum, product) {
+            return sum + $scope.getproductQuantity(product);
+        }, 0);
 
-    // $scope.getQuantity = function () {
-    //     var quantity = _.reduce($scope.cart, function (sum, product) {
-    //         return sum + $scope.getproductQuantity(product);
-    //     }, 0);
-
-    //     if ($scope.cart.length === 0) {
-    //         $scope.emptycart = "Your cart is empty."
-    //     }
-    //     else {
-    //         $scope.emptycart = ""
-    //     }
-    //     return quantity;
-    // } 
+        if ($scope.cart.length === 0) {
+            $scope.emptycart = "Your cart is empty."
+        }
+        else {
+            $scope.emptycart = ""
+        }
+        return quantity;
+    } 
+    2
+3
+	
+$scope.backToTop = function() {
+          $("html, body").animate({ scrollTop: 0 }, 1000);
+      } 
 })

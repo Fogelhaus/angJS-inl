@@ -64,7 +64,7 @@
                 <!-- Shopping Cart -->
 
                 <div id="cartButton" ng-click="toggleCart()">
-                    <i class="fas fa-shopping-cart">
+                    <i class="fas fa-shopping-cart"></i>
                         Cart ({{ getQuantity() }})
 
 
@@ -72,7 +72,7 @@
                             <p>{{ emptycart }}</p>
                             <table>
                                 <tr ng-repeat="product in cart">
-                                    <td>{{product.quantity}} x {{ product.name }}</td>
+                                    <td><small>{{product.quantity}} x {{ product.productname }}</small></td>
                                     <td>{{getProductCost(product)}} :-</td>
                                     <td><button class="btn btn-link remove-item " ng-click="removeItem(product)"><i
                                                 class="fas text-danger fa-trash-alt"></i></button></td>
@@ -291,7 +291,7 @@
             </div>
             <div id="footerBottom" class="row col-8 offset-2 justify-content-between">
                 <div id="copyright" class="d-flex align-items-center">Copyright By </div>
-                <div class="toTop">
+                <div class="toTop" scrollable ng-click="backToTop()">
                     BACK TO TOP
                 </div>
             </div>
@@ -305,6 +305,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-cookies.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
     <script src="https://underscorejs.org/underscore-min.js"></script>
 
     <script src="script/app.js"></script>
