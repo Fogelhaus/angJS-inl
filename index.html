@@ -15,6 +15,10 @@
 </head>
 
 <body ng-controller="mainController">
+    <div id="screensize"class="alert alert-danger text-center" role="alert">
+            This page is to be viewed with a 1920 px wide window!
+
+    </div>
     <div class="container mw-100">
         <header>
             <div id="headerTop" class="row text-white w-100">
@@ -66,33 +70,33 @@
                 <!-- Login&Out -->
                 <div id="viewArea" ng-view></div>
                 <!-- Shopping Cart -->
-                <div id="cartButtonArea" >
+                <div id="cartButtonArea">
                     <div id="cartButton" class="btn d-flex rubik align-items-center" ng-click="toggleCart()">
                         <i class="fas fa-shopping-cart"></i>
-                        Cart 
+                        Cart
                         <span id="cartBadge" class="badge badge-pill badge-secondary" ng-class="badgeColor">
-                        {{ getQuantity() }}
-                    </span>
+                            {{ getQuantity() }}
+                        </span>
 
-                        
+
                     </div>
                     <div id="cartContainer">
-                            <div id="shoppingCart" >
-                                <p class="mx-4">{{ emptycart }}</p>
-                                <table class="mx-4 rubik">
-                                    <tr ng-repeat="product in cart">
-                                        <td><small>{{product.quantity}} x {{ product.productname }}</small></td>
-                                        <td>{{getProductCost(product)}} :-</td>
-                                        <td><button class="btn btn-link remove-item " ng-click="removeItem(product)"><i
-                                                    class="fas text-danger fa-trash-alt"></i></button></td>
-                                    </tr>
-                                </table>
-                                <h4 class="p-1 col text-danger text-center">Total: {{ getTotal() }} SEK</h4>
-                                <a ng-hide="$root.loggedIn" href="#!/login" ng-click="toggleLogin()"
-                                    class="col cartLogin p1 ">Log in</a>
-                                <button id="checkOut" ng-hide="!$root.loggedIn" class="col ">Check out</button>
-                            </div>
+                        <div id="shoppingCart">
+                            <p class="mx-4">{{ emptycart }}</p>
+                            <table class="mx-4 rubik">
+                                <tr ng-repeat="product in cart">
+                                    <td><small>{{product.quantity}} x {{ product.productname }}</small></td>
+                                    <td>{{getProductCost(product)}} :-</td>
+                                    <td><button class="btn btn-link remove-item " ng-click="removeItem(product)"><i
+                                                class="fas text-danger fa-trash-alt"></i></button></td>
+                                </tr>
+                            </table>
+                            <h4 class="p-1 col text-danger text-center">Total: {{ getTotal() }} SEK</h4>
+                            <a ng-hide="$root.loggedIn" href="#!/login" ng-click="toggleLogin()"
+                                class="col cartLogin p1 ">Log in</a>
+                            <button id="checkOut" ng-hide="!$root.loggedIn" class="col ">Check out</button>
                         </div>
+                    </div>
 
                 </div>
 
@@ -144,7 +148,7 @@
 
         </div>
 
-        <div id="presentationOptions" class="row offset-2 d-flex align-items-center">
+        <div id="presentationOptions" class="row offset-2 d-flex ">
             <div id="viewArea" class="row rubik col">
                 <div id="viewGrid" class="offset-2 d-flex align-items-center">
                     <a class="cursor-pointer" ng-click="changeView('grid.view.html')">
@@ -153,26 +157,26 @@
                         </div>
                     </a>
                 </div>
-                <div id="viewList" class=" ml-4 d-flex align-items-center ">
-                    <a class="cursor-pointer"ng-click="changeView('list.view.html')">
+                <div id="viewList" class=" ml-4 col d-flex align-items-center ">
+                    <a class="cursor-pointer" ng-click="changeView('list.view.html')">
                         <div id="viewListBg">
                             <i class="fas fa-bars "></i>
                         </div>
                     </a>
                 </div>
             </div>
-            <div id="results" class="col offset-1 mr-3 d-flex align-items-center">
-                <label for="productsShow">Products per page: </label>
-                <select name="productsShow" id="productsShow" class="dropDown" ng-model="productsShow">
-                    <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="20">20</option>
-                    <option value="50">50</option>
-                    <option value="100">100</option>
-                </select>
-                Showing 1-{{ productsShow }} of {{ productsTotal }} results</div>
-
-            <div id="sort" class="col dropdown d-flex align-items-center">
+            <div id="results" class="  mr-3 d-flex align-items-center">
+                <div id="productsshowArea"> <label for="productsShow">Products per page: </label>
+                    <select name="productsShow" id="productsShow" class="dropDown" ng-model="productsShow">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    Showing 1-{{ productsShow }} of {{ productsTotal }} results</div>
+            </div>
+            <div id="sort" class=" dropdown d-flex align-items-center">
                 <select name="sortButton" id="sortButton" class="" ng-model="sortColumn" aria-placeholder="Sort By">
                     <option value="productname" ng-click="sortData('productname')"> Product Name </option>
                     <option value="category" ng-click="sortData('category')"> Category</option>
@@ -188,6 +192,9 @@
                     <div class="searchIcon"></div>
                     <i class="fas fa-search"></i>
                 </div>
+            </div>
+            <div id="fillerColumn">
+                
             </div>
         </div>
 

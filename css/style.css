@@ -92,14 +92,29 @@ color: #ff8155;
 
 }
 
+#presentationOptions{
+    display: grid;
+    grid-template-columns: auto auto auto auto 300px;
+ }
 /* View Area */
 #viewArea{
     margin-top: 0px;
     width: 120px;
+    grid-column: 1;
 
 }
+#results{
+    grid-column: 2;
+}
+#sort{
+    grid-column: 3;
+}
 
+#fillerColumn{
+    grid-column: 5;
+    width: 320px;
 
+}
 .logButtonArea{
    
     position: relative;
@@ -285,10 +300,7 @@ margin-top: 15px;
     display: flex;
     align-items: flex-start;
 }
-#presentationOptions{
-    margin-top: 110px;
-    margin-bottom: 50px;
-}
+
 
 #viewGridBg{
     background: lightgray;
@@ -343,6 +355,7 @@ appearance: none;
 -moz-appearance: none;
 }
 #searchArea{
+    grid-column: 4;
     position: relative;
 
 }
@@ -599,3 +612,21 @@ width: 200px;
 .toTop:hover{
     cursor: pointer;
 }
+/* Media Queries */
+@media (min-width: 1899px){
+    #screensize{
+        display: none;
+        
+    }
+ 
+}
+@media (max-width: 1900px){
+    .container{
+        display: none;
+    }
+}
+@media (min-width: 2100px){
+    .container{
+        display: none;
+        
+    }
