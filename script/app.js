@@ -63,7 +63,7 @@ function run($rootScope, $location, $cookies, $http) {
             }
 
 
-            console.log(loggedIn);
+            
         }
     })
 }
@@ -80,6 +80,20 @@ app.controller('mainController', function ($scope, $rootScope, productsGet, $coo
             return true;
         }
     }
+    //NG-INCLUDE
+
+    $rootScope.changeView = function(view) {
+        $rootScope.productComponent = "partials/" + view;
+        
+        
+     
+    }
+    $rootScope.productComponent = "partials/grid.view.html"
+
+    
+
+    //PRODUCTS
+    
     productsGet.products().then(function (data) {
         $scope.products = data;
 
@@ -92,18 +106,9 @@ app.controller('mainController', function ($scope, $rootScope, productsGet, $coo
         $scope.reversesort = false;
 
         $scope.sortData = function (column) {
-            //RESULTAT KAN HAMNA UTANFÖR SYNLIGA LISTAN VID REVERSESORT
-            // $scope.reverseSort = ($scope.sortColumn == column) ? !$scope.reverseSort : false;
-            $scope.sortColumn = column;
+             $scope.sortColumn = column;
         }
 
-        // $scope.getSortClass = function (column) {
-
-        //           if ($scope.sortColumn == column) {
-        //               return $scope.reverseSort ? 'down-arrow' : 'up-arrow';
-        //         }
-        //        return ''; 
-        // }
 
         $scope.search = function (item) {
             if ($scope.searchText == undefined) {
@@ -136,6 +141,19 @@ app.controller('mainController', function ($scope, $rootScope, productsGet, $coo
         }
 
     });
+
+    //Login
+
+    var loginIsVisible = false;
+    $scope.toggleLogin = function () {
+        if (loginIsVisible) {
+            document.getElementById("logButtonShow").style = " visibility: hidden;"
+        } else {
+            document.getElementById("logButtonShow").style = " visibility: visible;"
+        }
+        loginIsVisible = !loginIsVisible;
+    }
+
 
     //CART
 
@@ -223,9 +241,11 @@ app.controller('mainController', function ($scope, $rootScope, productsGet, $coo
 
         if ($scope.cart.length === 0) {
             $scope.emptycart = "Your cart is empty."
+            $rootScope.badgeColor ="badge-secondary"
         }
         else {
             $scope.emptycart = ""
+            $rootScope.badgeColor = "badge-danger"
         }
         return quantity;
     } 

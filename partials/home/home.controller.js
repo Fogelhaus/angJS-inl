@@ -7,10 +7,21 @@
     homeController.$inject = ["userService", "$rootScope", "$location", "$scope"];
     function homeController(userService, $rootScope, $location, $scope) {
 
-        $rootScope.logOut = function () {
-            $rootScope.globals.currentUser = undefined;
+        // $rootScope.logOut = function () {
+        //     console.log(currentUser(id));
+
+        //     $rootScope.globals.currentUser = undefined;
+            
+            
+        //     $location.path("/login");
+        //     $window.location.reload();
+
+            
+        // }
+        $scope.logOut = function () {
+            window.location.reload(); 
             $location.path("/login");
-        }
+          };
 
         if ($rootScope.globals.currentUser !== undefined) {
             var vm = this;

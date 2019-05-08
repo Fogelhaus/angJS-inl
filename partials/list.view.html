@@ -18,7 +18,7 @@
                         Price
                     </th>
                     <th>
-                        RatingRating
+                        Rating
                     </th>
                     <th>
                         In Stock
@@ -40,7 +40,7 @@
                         <!-- ng-class="{'gold': ($index + 1) <= array.rating, 'grey': ($index + .5) == array.rating}" -->
                     <td class="center-text">{{ product.instock | number }}</td>
                     <td>{{ product.instockdate | date: "yyyy-MM-dd" }}</td>
-                    <td><button ng-click="addItem(product)">Add to cart <i class="fas fa-shopping-bag"></i></button></td>
+                    <td><button class="addToCartButton" ng-click="addItem(product)">Add to cart <i class="fas fa-shopping-bag"></i></button></td>
                 </tr>
             </tbody>
         </table>

@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -50,50 +50,58 @@
                         <button id="phoneButton" class="btn rubik btn-secondary px-4">+90878 87 878 7</button>
                     </div>
                 </div>
-                <div id="headerNav" class="d-flex rubik align-items-center mt-3 ">
+                <div id="headerNav" class="d-flex rubik align-items-center mt-3 mr-5">
                     <ul>
-                        <li class="px-3 "> <a href="#" class="text-reset">Home</a> </li>
-                        <li class="px-3"><a href="#" class="text-reset">About</a></li>
-                        <li class="px-3"><a href="#" class="text-reset">Services</a></li>
-                        <li class="px-3"><a href="#" class="text-reset">Pages</a></li>
-                        <li class="px-3"><a href="#" class="text-reset">News</a></li>
-                        <li class="px-3"><a href="#" class="text-reset">Contact</a></li>
+                        <li class="px-2 "> <a href="#" class="text-reset">Home</a> </li>
+                        <li class="px-2"><a href="#" class="text-reset">About</a></li>
+                        <li class="px-2"><a href="#" class="text-reset">Services</a></li>
+                        <li class="px-2"><a href="#" class="text-reset">Pages</a></li>
+                        <li class="px-2"><a href="#" class="text-reset">News</a></li>
+                        <li class="px-2"><a href="#" class="text-reset">Contact</a></li>
 
                     </ul>
                 </div>
+
+
+                <!-- Login&Out -->
+                <div id="viewArea" ng-view></div>
                 <!-- Shopping Cart -->
+                <div id="cartButtonArea" >
+                    <div id="cartButton" class="btn d-flex rubik align-items-center" ng-click="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        Cart 
+                        <span id="cartBadge" class="badge badge-pill badge-secondary" ng-class="badgeColor">
+                        {{ getQuantity() }}
+                    </span>
 
-                <div id="cartButton" ng-click="toggleCart()">
-                    <i class="fas fa-shopping-cart"></i>
-                        Cart ({{ getQuantity() }})
-
-
-                        <div id="shoppingCart">
-                            <p>{{ emptycart }}</p>
-                            <table>
-                                <tr ng-repeat="product in cart">
-                                    <td><small>{{product.quantity}} x {{ product.productname }}</small></td>
-                                    <td>{{getProductCost(product)}} :-</td>
-                                    <td><button class="btn btn-link remove-item " ng-click="removeItem(product)"><i
-                                                class="fas text-danger fa-trash-alt"></i></button></td>
-                                </tr>
-                            </table>
-                            <h4 class="p-1 col text-danger">Total: {{ getTotal() }} SEK</h4>
-                            <a ng-hide="$root.loggedIn" href="#!/login" class="col cartLogin p1">Log in</a>
-                            <button ng-hide="!$root.loggedIn" class="col">Check out</button>
+                        
+                    </div>
+                    <div id="cartContainer">
+                            <div id="shoppingCart" >
+                                <p class="mx-4">{{ emptycart }}</p>
+                                <table class="mx-4 rubik">
+                                    <tr ng-repeat="product in cart">
+                                        <td><small>{{product.quantity}} x {{ product.productname }}</small></td>
+                                        <td>{{getProductCost(product)}} :-</td>
+                                        <td><button class="btn btn-link remove-item " ng-click="removeItem(product)"><i
+                                                    class="fas text-danger fa-trash-alt"></i></button></td>
+                                    </tr>
+                                </table>
+                                <h4 class="p-1 col text-danger text-center">Total: {{ getTotal() }} SEK</h4>
+                                <a ng-hide="$root.loggedIn" href="#!/login" ng-click="toggleLogin()"
+                                    class="col cartLogin p1 ">Log in</a>
+                                <button id="checkOut" ng-hide="!$root.loggedIn" class="col ">Check out</button>
+                            </div>
                         </div>
 
                 </div>
-                <!-- Login&Out -->
-                <div class=" pl-4 d-flex align-items-center  ">
-                    <div id="loginButton" class="btn rubik logBtn " ng-hide="$root.isLoggedIn()"><a href="#!/login">Log
-                            in</a></div>
-                    <div id="logoutButton" class="btn rubik  logBtn" ng-hide="!$root.isLoggedIn()"><span
-                            ng-click="logOut()">Log Out</span></div>
-                </div>
+
 
             </div>
+
         </header>
+
+
         <!-- HEADLINE -->
         <div id="storeHeadline" class=" text-center text-white ">
             <div id="digitalMarketing" class="">DIGITAL MARKETING</div>
@@ -139,17 +147,16 @@
         <div id="presentationOptions" class="row offset-2 d-flex align-items-center">
             <div id="viewArea" class="row rubik col">
                 <div id="viewGrid" class="offset-2 d-flex align-items-center">
-                    <a href="#/!">
-                        <div id="viewGridBg" class=" ml-3 p-2"
-                            ng-class="{'active': cardActive, 'not-active': !cardActive}">
-                            <img src="/images/gridview.svg" alt="" ng-click="cardActive = false">
+                    <a class="cursor-pointer" ng-click="changeView('grid.view.html')">
+                        <div id="viewGridBg" class=" ml-3 p-2">
+                            <img src="/images/gridview.svg" alt="">
                         </div>
                     </a>
                 </div>
                 <div id="viewList" class=" ml-4 d-flex align-items-center ">
-                    <a href="#!viewList">
-                        <div id="viewListBg" ng-class="{'not-active': cardActive, 'active': !cardActive}">
-                            <img src="/images/listview.svg" class=" p-2" alt="" ng-click="cardActive = true">
+                    <a class="cursor-pointer"ng-click="changeView('list.view.html')">
+                        <div id="viewListBg">
+                            <i class="fas fa-bars "></i>
                         </div>
                     </a>
                 </div>
@@ -183,7 +190,8 @@
                 </div>
             </div>
         </div>
-        <div ng-view></div>
+
+        <div ng-include="productComponent" class="my-4"></div>
 
 
 

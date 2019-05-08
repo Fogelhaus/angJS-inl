@@ -30,8 +30,16 @@ margin: 0;
 }
 
 .rubik{
-    font-family: Rubik, sans-serif;
+    font-family: 'Rubik', sans-serif;
  
+}
+header{
+    position:fixed; 
+    top:0; 
+    left:0; 
+    z-index:2000; 
+    width:100%;
+    background-color: #ffffff;
 }
 
 #headerTop{
@@ -51,6 +59,8 @@ header #headerMenu{
     font-family: 'gilroyextrabold', Arial, sans-serif;
    padding: 0;
    font-size: 12pt;
+   
+
     
 }
 .logoName{
@@ -81,15 +91,29 @@ color: #ff8155;
    font-size: 12pt;
 
 }
+
+/* View Area */
+#viewArea{
+    margin-top: 0px;
+    width: 120px;
+
+}
+
+
+.logButtonArea{
+   
+    position: relative;
+}
 .logBtn{
-    border-radius: 35px;
+    border-radius: 45px;
+    color: #ffffff;
     background: #ff8155;
     border: #ff8155;
-    width: 100px;
+    width: 120px;
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    position: absolute;
+    cursor: pointer;
+    top: -0px;
     
 }
 .logBtn a{
@@ -97,13 +121,115 @@ color: #ff8155;
     
     
 }
+    
+#logButtonShow{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    visibility: hidden;
+    width:500px;
+    height: fit-content;
+    background-color: rgba(245, 250, 250, 0.7);
+    border-radius: 35px;
+    color: #000000;
+    border: 1px  solid #ff82555b;
+}
+#registerButtonShow{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    visibility: hidden;
+    width:500px;
+    height: fit-content;
+    background-color: rgba(245, 250, 250, 0.7);
+    border-radius: 35px;
+    color: #000000;
+    border: 1px  solid #ff82555b;
+}
+#homeTable p{
+margin-left: 10px;
+margin-top: 15px;
+}
+#homeTable a{
+    margin-left: 10px;
+    }
+    
+
+/* Shopping Cart */
+#cartButtonArea{
+    margin-left: 50px;
+}
+#cartButton{
+    cursor: pointer;
+    border-radius: 45px;
+    color: #ffffff;
+    background: #ff8155;
+    border: #ff8155;
+    width: 120px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+}
+#cartBadge{
+    font-size:12px; 
+    font-weight:normal; 
+    margin-left: 5px;
+    /* position: absolute;
+     top:10px; 
+    left:30px */
+}
+
+#cartContainer{
+    position: relative;
+    cursor: default;
+    
+}
+#shoppingCart{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: fit-content;
+    max-height: 600px;
+    background-color: rgba(245, 250, 250, 0.7);
+    border-radius: 35px;
+    color: #000000;
+    border: 1px  solid #ff82555b;
+    overflow: auto;
+}
+#checkOut{
+    border-radius: 45px;
+    background: #ff8155;
+    width: 240px;
+    margin-left: 75px;
+    border: none;
+    color: #ffffff;
+    
+    
+}
+.cartLogin{
+    border-radius: 45px;
+    background: #ff8155;
+    
+    margin-left: 160px;
+    border: none;
+    color: #ffffff;
+}
+
+
+
+/* Store Headline */
 #storeHeadline{
+    margin-top: 200px;
     background-image: url("/images/bgdots1.png");
     height: 400px;
     
+    
 }
 #digitalMarketing{
-    padding-top: 110px;
+    padding-top: 90px;
     font-family: Rubik, sans-serif;
     font-size: 18pt;
     letter-spacing: 3px;
@@ -177,16 +303,23 @@ color: #ff8155;
 }
 
 #viewListBg{
-    background: #ff8155;
+    background: lightgray;
     border-radius: 100px;
-    
+    color: grey;
     height: 45px;
     width: 45px;
     text-align: center;
     
 }
-#viewListBg img{
-    margin-top: 4px;
+#viewListBg i{
+    font-size: 18pt;
+    margin-top: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.activeBtn{
+    background-color: #ff8155;
 }
 #productsShow {
     border: 2px solid rgba(0, 0, 0, 0.1);
@@ -306,6 +439,24 @@ font-size: 16pt;
 .gold   {
     color: #ffba00;
 }
+.addToCartButton{
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    height: 30px;
+    width: 120px;
+    color: #a9b2c0;
+    background-color: #ffffff;
+}
+.addToCartButton:hover{
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
+    height: 30px;
+    width: 120px;
+    color: #ff8155;
+    background-color: #ffffff;
+}
+
+
 #productPageCount{
     margin: 30px 0 110px 0;
 }
@@ -322,6 +473,10 @@ font-size: 16pt;
 #btn2{
     background: #ff8155;
 }
+
+
+
+/* Footer */
 footer{
     background-image: url("/images/bgdots2.png");
     height: 609px;

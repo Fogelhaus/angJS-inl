@@ -1,23 +1,30 @@
-<h1>Hi {{vm.user[0].firstname}}!</h1>
-<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
-<br>
-<h3>All registered users:</h3>
+<div class="logButtonArea  rubik ">
+    <div id="logButton" ng-click="toggleLogin()"
+        class=" logBtn btn pl-4 d-flex align-items-center justify-items-center ">
+       <small>My Account</small>
 
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Email</th>
-            <th>Full Name</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="user in vm.allUsers">
-            <td>{{ user._id }}</td>
-            <td>{{ user.email }}</td>
-            <td>{{ user.firstname }} {{ user.lastname }}</td>
-            <td><a class="btn btn-sm btn-danger text-white" ng-click="vm.deleteUser(user._id)">Delete</a></td>
-        </tr>
-    </tbody>
-</table>
+    </div>
+    <div id="logButtonShow" class="p-4" >
+        <h4 class="text-center">Hi {{vm.user[0].firstname}}!</h4>
+        <p><a href="#!/login" ng-click="logOut()" class=" btn btn-primary">Logout</a></p>
+        <br>
+        <h5>Your account Information:</h5>
+
+        <table id="homeTable">
+            <thead>
+                <tr>
+                    <th><p>Email</p></th>
+                    <th><p>Full Name</p></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td ><p>{{vm.user[0].email}}</p></td>
+                    <td ><p>{{vm.user[0].firstname}} {{vm.user[0].lastname}}</p></td>
+                    <td ><a class="btn btn-sm btn-danger text-white" ng-click="vm.deleteUser(user[0]._id)">Delete your account</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
